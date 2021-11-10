@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# React TypeScript Project with ESLint and Prettier
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Why use ESLint and Prettier?
 
-## Available Scripts
+ESLint is one of the most popular tools for code quality rules check and code formatting.
+Prettier is a code formatting tool that works better than ESLint.
 
-In the project directory, you can run:
 
-### `npm start`
+#### Index:
+1. [Setting up ESLint](#1)
+2. [Setting up Prettier](#2)
+3. [Checking files content](#3)
+4. [Making ESLint and Prettier work together](#4)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Prerequisites:
+Node >= 10
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<a name="1"></a>
+## 1. Setting up ESLint
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Remove pre-setted ESLint:
+React initialized with CRA comes with an eslint configuration pre-setted. Let’s remove this configuration so we can set a better one. To do this, remove the follow code from ‘package.json’ file
 
-### `npm run build`
+```
+"eslintConfig": {
+   "extends":[
+      "react-app",
+      "react-app/jest"
+   ]
+}
+```
+### Install ESLint package:
+`npm install eslint --save-dev`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Setup ESLint:
+`npx eslint --init`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When running this command, you will need to answer some questions about the configuration:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| OPTION | SELECTION |
+| --- | ------|
+| How would you like to use ESLint? | To check syntax, find problems, and enforce code style
+| What type of modules does your project use?| JavaScript modules (import/export)
+|Which framework does your project use?| React
+|Does your project use TypeScript?| Yes
+|Where does your code run?| Browser
+|How would you like to define a style for your project?| Use a popular style guide
+|Which style guide do you want to follow?| Airbnb: https://github.com/airbnb/javascript
+|What format do you want your config file to be in?| JSON
+|Would you like to install them now with npm?| Yes
 
-### `npm run eject`
+### Install VS Code ESLint extension
+ext install dbaeumer.vscode-eslint
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Solving remaining problems
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a name="2"></a>
+## 2. Setting up Prettier
 
-## Learn More
+<a name="3"></a>
+## 3. Checking files content
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a name="4"></a>
+## 4. Making ESLint and Prettier work together
