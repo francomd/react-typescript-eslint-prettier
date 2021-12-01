@@ -51,6 +51,7 @@ When running this command, you will need to answer some questions about the conf
 |Would you like to install them now with npm?| Yes
 
 ### Install VS Code ESLint extension
+Install it manually from the VSCode extensions menu or run the following command
 `ext install dbaeumer.vscode-eslint`
 
 ### Solving remaining problems
@@ -65,11 +66,13 @@ TBD
 `npm install --save-dev --save-exact prettier`
 
 ### Install Prettier VSCode extension
+Install it manually from the VSCode extensions menu or run the following command
 `ext install esbenp.prettier-vscode`
 
 
 <a name="3"></a>
 ## 3. Checking files content
+Edit the files to match the content
 
 ### Package JSON
 /package.json
@@ -192,3 +195,15 @@ coverage
   }
 }
 ```
+
+## Extra
+Change Prettier's "errors" to "warnings" to avoid compile fail
+`
+{
+...
+  "rules": {
+    "prettier/prettier": "warn",
+  }
+...
+}
+`
