@@ -31,9 +31,11 @@ React initialized with CRA comes with an eslint configuration pre-setted. Let’
 }
 ```
 ### Install ESLint package:
+
 `npm install eslint --save-dev`
 
 ### Setup ESLint:
+
 `npx eslint --init`
 
 When running this command, you will need to answer some questions about the configuration:
@@ -52,6 +54,7 @@ When running this command, you will need to answer some questions about the conf
 
 ### Install VS Code ESLint extension
 Install it manually from the VSCode extensions menu or run the following command
+
 `ext install dbaeumer.vscode-eslint`
 
 ### Solving remaining problems
@@ -63,12 +66,18 @@ TBD
 
 
 ### Install Prettier package
+
 `npm install --save-dev --save-exact prettier`
 
 ### Install Prettier VSCode extension
 Install it manually from the VSCode extensions menu or run the following command
+
 `ext install esbenp.prettier-vscode`
 
+### Install Prettier IntelliJ extension
+Install it manually from the marketplace extensions tab
+
+[Run Prettier on save](https://www.jetbrains.com/help/idea/prettier.html#ws_prettier_run_automatically_in_current_project)
 
 <a name="3"></a>
 ## 3. Checking files content
@@ -198,7 +207,7 @@ coverage
 
 ## Extra
 Change Prettier's "errors" to "warnings" to avoid compile fail
-`
+```
 {
 ...
   "rules": {
@@ -206,4 +215,4 @@ Change Prettier's "errors" to "warnings" to avoid compile fail
   }
 ...
 }
-`
+```
